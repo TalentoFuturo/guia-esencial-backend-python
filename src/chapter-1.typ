@@ -4,11 +4,12 @@
 #import "@preview/colorful-boxes:1.4.2": *
 
 #import "table-style.typ": styled-comparison-table
+#import "components.typ": protip
 
 #set text(lang: "es")
 
 
-= Capítulo 1: Introducción al desarrollo backend
+= Introducción al desarrollo backend
 
 El desarrollo backend es una pieza fundamental en la creación de aplicaciones web. Mientras que el frontend maneja la interfaz y la experiencia del usuario, el backend es responsable de la lógica del negocio, la gestión de datos y la comunicación con bases de datos y otros servicios.
 
@@ -56,14 +57,9 @@ Los frameworks ayudan a los desarrolladores a estructurar su código y facilitar
 - Se está construyendo una API moderna optimizada para microservicios.
 - Se busca aprovechar `async/await` para operaciones de I/O intensivas.
 
-#slanted-colorbox(
-  title: "🚀 ProTip",
-  color: "blue",
-  radius: 0pt,
-  width: auto
-)[
-  *ProTip:* No tienes que elegir entre uno y otro. Puedes combinar Django para la administración y FastAPI para servicios de alto rendimiento.
-]
+#protip([
+  No tienes que elegir entre uno y otro. Puedes combinar Django para la administración y FastAPI para servicios de alto rendimiento.
+])
 
 == Componentes de una arquitectura web
 
@@ -83,11 +79,6 @@ Una arquitectura backend moderna generalmente incluye los siguientes componentes
 + *Mensajería y colas:* Manejo de tareas asíncronas (ej. Celery con Django, RabbitMQ, Kafka).
 + *Infraestructura de despliegue:* Servidores o contenedores para la aplicación (ej. Docker, Kubernetes).
 
-#slanted-colorbox(
-  title: "🚀 ProTip",
-  color: "blue",
-  radius: 0pt,
-  width: auto
-)[
-  No necesitas todos estos componentes desde el inicio. Empieza simple y escálala a medida que crece la aplicación.
-]
+#protip([
+    No necesitas todos estos componentes desde el inicio. Empieza simple y escálala a medida que crece la aplicación.
+  ])
