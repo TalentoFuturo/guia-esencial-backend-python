@@ -19,9 +19,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Instalar Typst
-        uses: yusancky/setup-typst@v2
-        with:
-          version: 'latest'
+        uses: typst-community/setup-typst@v4
 
       - name: Crear carpeta de salida
         run: mkdir -p build
@@ -29,25 +27,7 @@ jobs:
       - name: Compilar libro
         run: typst compile --font-path src/fonts --format pdf src/main.typ build/libro-python-backend.pdf
 
-      - name: Determinar versión
-        id: version
-        run: |
-          if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
-            echo "VERSION=${{ github.event.inputs.version }}" >> $GITHUB_ENV
-          else
-            echo "VERSION=v$(date +'%Y.%m.%d')" >> $GITHUB_ENV
-          fi
-
-      - name: Crear Release
-        id: create_release
-        uses: softprops/action-gh-release@v1
+      - uses: actions/upload-artifact@v4
         with:
-          name: Guía Python Backend ${{ env.VERSION }}
-          tag_name: ${{ env.VERSION }}
-          draft: false
-          prerelease: false
-          files: |
-            build/libro-python-backend.pdf
-          fail_on_unmatched_files: true
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+          name: libro-python-backend
+          path: build/libro-python-backend.pdf
