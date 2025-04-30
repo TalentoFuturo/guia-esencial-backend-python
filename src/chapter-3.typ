@@ -5,14 +5,14 @@
 #import "@preview/colorful-boxes:1.4.2": *
 
 #import "table-style.typ": styled-comparison-table
-#import "components.typ": protip
+#import "components.typ": protip, note
 #set text(lang: "es")
 
 = Desarrollo de aplicaciones en Django
 
 Django maneja las rutas mediante el archivo urls.py, donde se definen los patrones de URL y las vistas asociadas. Las vistas son funciones o clases que procesan las solicitudes y devuelven respuestas.
 
-Ejemplo de configuración en urls.py:
+*Ejemplo de configuración en urls.py*:
 
 #codly(languages: codly-languages)
 ```python
@@ -25,7 +25,7 @@ urlpatterns = [
 ]
 ```
 
-Ejemplo de una vista en views.py:
+*Ejemplo de una vista en views.py*:
 
 #codly(languages: codly-languages)
 ```python
@@ -43,7 +43,7 @@ def saludo(request):
 == Modelos y ORM en Django
 Django cuenta con un ORM (Object-Relational Mapper) que permite interactuar con bases de datos mediante clases en Python.
 
-Ejemplo de un modelo:
+*Ejemplo de un modelo*:
 
 #codly(languages: codly-languages)
 ```python
@@ -64,7 +64,9 @@ class Producto(models.Model):
 ])
 
 == Administración de Django
-Django incluye un panel de administración automático que permite gestionar los modelos sin necesidad de escribir código adicional. Para activarlo, registra los modelos en admin.py:
+Django incluye un panel de administración automático que permite gestionar los modelos sin necesidad de escribir código adicional. 
+
+*Para activarlo, registra los modelos en admin.py*:
 
 #codly(languages: codly-languages)
 ```python
@@ -75,22 +77,22 @@ from .models import Producto # Importa tu modelo
 admin.site.register(Producto)
 ```
 
-Inicia sesión en http://127.0.0.1:8000/admin/ con un superusuario:
+Inicia sesión en #link("http://127.0.0.1:8000/admin/") con un superusuario:
 
 #codly(languages: codly-languages)
 ```bash
 python manage.py createsuperuser
 ```
 
-
 #protip([
-  Personaliza el panel de administración para mejorar la usabilidad con list_display y search_fields.
+  Personaliza el panel de administración para mejorar la usabilidad con `list_display` y `search_fields`.
 ])
 
 == Plantillas y Renderización en Django
+
 El sistema de plantillas de Django permite generar contenido dinámico en HTML utilizando el motor de plantillas integrado.
 
-Ejemplo de una plantilla en templates/mi_template.html:
+*Ejemplo de una plantilla en `templates/mi_template.html`*:
 
 #codly(languages: codly-languages)
 ```html
@@ -105,7 +107,7 @@ Ejemplo de una plantilla en templates/mi_template.html:
 </html>
 ```
 
-Renderización en una vista:
+*Renderización en una vista*:
 
 #codly(languages: codly-languages)
 ```python
@@ -122,9 +124,10 @@ def mostrar_nombre(request):
 ])
 
 == Formularios y validaciones en Django
+
 Django proporciona un sistema robusto para manejar formularios y validaciones.
 
-Ejemplo de un formulario en forms.py:
+*Ejemplo de un formulario en `forms.py`*:
 
 #codly(languages: codly-languages)
 ```python
@@ -137,31 +140,28 @@ class ContactoForm(forms.Form):
     mensaje = forms.CharField(widget=forms.Textarea)
 ```
 
-Manejo del formulario en una vista:
+*Manejo del formulario en una vista*:
 
 #codly(languages: codly-languages)
 ```python
-# views.py
 from django.shortcuts import render
-from .forms import ContactoForm # Importa tu formulario
+from .forms import ContactoForm
 
 def contacto(request):
     if request.method == 'POST':
-        form = ContactoForm(request.POST) # Crea el form con datos enviados
+        form = ContactoForm(request.POST)
         if form.is_valid():
-            # Procesa los datos validados
+            # acá iría la lógica para procesar los datos, como enviar un email
             nombre = form.cleaned_data['nombre']
             email = form.cleaned_data['email']
             mensaje = form.cleaned_data['mensaje']
             print(f"Mensaje de {nombre} ({email}): {mensaje}")
-            # Aquí podrías enviar un email, guardar en BD, etc.
-            return render(request, 'gracias.html') # Redirige o muestra agradecimiento
+            return render(request, 'gracias.html')
     else:
-        form = ContactoForm() # Crea un form vacío para GET
-
-    return render(request, 'contacto.html', {'form': form}) # Pasa el form a la plantilla
+        form = ContactoForm()
+    return render(request, 'contacto.html', {'form': form})
 ```
 
 #protip([
-  Usa ModelForm para crear formularios basados en modelos y reducir código repetitivo.
+  Usa `ModelForm` para crear formularios basados en modelos y reducir código repetitivo.
 ])

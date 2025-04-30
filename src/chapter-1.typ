@@ -2,6 +2,7 @@
 #import "@preview/codly:1.3.0": *
 #import "@preview/tblr:0.3.1": *
 #import "@preview/colorful-boxes:1.4.2": *
+#import "@preview/pintorita:0.1.4": *
 
 #import "table-style.typ": styled-comparison-table
 #import "components.typ": protip
@@ -43,7 +44,7 @@ Los frameworks ayudan a los desarrolladores a estructurar su código y facilitar
   caption: [Comparación entre Django y FastAPI]
 )
 
-== Entonces... ¿cuándo usar Django y cuándo usar FastAPI?
+Entonces... ¿cuándo usar Django y cuándo usar FastAPI?
 
 *Django es ideal si...*
 
@@ -64,13 +65,12 @@ Los frameworks ayudan a los desarrolladores a estructurar su código y facilitar
 == Componentes de una arquitectura web
 
 #figure(
+  image("./images/web-architecture.png", width: 60%),
   caption: [Diagrama de arquitectura web con BD, Backend, API y Frontend],
-  // Placeholder para la imagen, que no está disponible
-  rect(width: 100%, height: 5cm, stroke: black, fill: rgb("#f5f5f5"))
 )
 
 Una arquitectura backend moderna generalmente incluye los siguientes componentes:
-
+#set enum(numbering: "a")
 + *Servidor web:* Gestiona las peticiones de los usuarios (ej. Nginx, Apache, Uvicorn para FastAPI).
 + *Framework backend:* Procesa la lógica de negocio (ej. Django, FastAPI).
 + *Base de datos:* Almacena y recupera datos (ej. PostgreSQL, MYSQL, MongoDB).

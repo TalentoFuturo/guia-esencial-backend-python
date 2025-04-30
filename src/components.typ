@@ -12,3 +12,19 @@
     ]
   ]
 }
+
+#let note(
+  title: "Nota",
+  content: content
+) = {
+  block(breakable: false)[
+    #slanted-colorbox(
+      title: title,
+      color: "purple",
+      radius: 0pt,
+      width: auto
+    )[
+      #content
+    ]
+  ]
+}

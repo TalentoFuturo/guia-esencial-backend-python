@@ -5,7 +5,7 @@
 #import "@preview/colorful-boxes:1.4.2": *
 
 #import "table-style.typ": styled-comparison-table
-#import "components.typ": protip
+#import "components.typ": protip, note
 #set text(lang: "es")
 
 
@@ -17,12 +17,16 @@ Django es un framework de alto nivel para desarrollo web en Python que fomenta u
 
 Django se basa en el principio DRY (Don't Repeat Yourself), lo que significa que facilita la reutilización de código y minimiza la redundancia. Es una opción popular por su facilidad de uso y su robusto ecosistema de paquetes.
 
-*Ventajas de Django:*
+#note(
+  title: "💡 Ventajas de Django",
+  content: [
+    - Rápido desarrollo con una estructura bien organizada.
+    - Incluye un ORM poderoso para manejar bases de datos.
+    - Seguridad integrada (protección contra SQL Injection, CSRF, XSS).
+    - Extensa documentación y una comunidad activa.
+  ]
+)
 
-- Rápido desarrollo con una estructura bien organizada.
-- Incluye un ORM poderoso para manejar bases de datos.
-- Seguridad integrada (protección contra SQL Injection, CSRF, XSS).
-- Extensa documentación y una comunidad activa.
 
 == Instalación y configuración inicial
 
@@ -49,13 +53,6 @@ Para instalar Django, primero necesitas tener Python y pip instalados en tu sist
 #protip([
   Usa entornos virtuales siempre. Evitarás conflictos de dependencias con otros proyectos.
 ])
-
-#figure(
-  caption: [Estructura de directorios de un proyecto Django inicial],
-  // ![Image 2: Estructura de directorios de un proyecto Django inicial]
-  rect(width: 100%, height: 5cm, stroke: black, fill: rgb("#f5f5f5"))
-)
-
 
 Una vez instalado Django, puedes crear un nuevo proyecto con:
 
@@ -84,13 +81,11 @@ Luego, para verificar que todo está funcionando:
 python manage.py runserver
 ```
 
-
-Abre tu navegador en http://127.0.0.1:8000 y verás la pantalla de bienvenida de Django.
+Abre tu navegador en #link("http://127.0.0.1:8000") y verás la pantalla de bienvenida de Django.
 
 #figure(
+  image("./images/django-welcome.png", width: 60%),
   caption: [Pantalla de bienvenida de Django con cohete],
-  // ![Image 3: Pantalla de bienvenida de Django con cohete]
-  rect(width: 100%, height: 5cm, stroke: black, fill: rgb("#f5f5f5"))
 )
 
 == Arquitectura MVT (Model-View-Template) en Django
@@ -102,9 +97,8 @@ Django sigue el patrón MVT (Model-View-Template):
 - Template: Se encarga de la representación visual de los datos.
 
 #figure(
+  image("./images/mvt-architecture.png", width: 60%),
   caption: [Diagrama de flujo de la arquitectura MVT (Model -> View -> Template)],
-  // ![Image 4: Diagrama de flujo de la arquitectura MVT (Model -> View -> Template)]
-  rect(width: 100%, height: 5cm, stroke: black, fill: rgb("#f5f5f5"))
 )
 
 Este patrón permite una separación clara de responsabilidades y facilita el mantenimiento del código.

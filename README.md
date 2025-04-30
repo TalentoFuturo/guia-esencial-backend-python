@@ -11,7 +11,7 @@ brew install typst
 Generar el ebook:
 
 ```bash
-typst compile --format pdf src/main.typ book.pdf
+typst compile --font-path src/fonts --format pdf src/main.typ book.pdf
 ```
 
 Para volver a compilar el ebook cuando hay cambios:
