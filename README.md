@@ -20,3 +20,9 @@ Para volver a compilar el ebook cuando hay cambios:
 typst watch --font-path src/fonts --format pdf src/main.typ book.pdf
 ```
 
+Para generar el ebook en github actions, debemos generar un tag de la forma `v<número de versión>` y pushearlo.
+
+```bash
+git tag v1.0.4
+git push origin v1.0.4
+```
