@@ -61,7 +61,7 @@ app = FastAPI()
 # Definimos el modelo con validaciones
 class Usuario(BaseModel):
   nombre: str = Field(min_length=3, max_length=50)
-  edad: int = Field(gt=0, lt=120) // gt: greater than, lt: less than
+  edad: int = Field(gt=0, lt=120) # gt: greater than, lt: less than
   email: str
 
 @app.post("/usuarios")

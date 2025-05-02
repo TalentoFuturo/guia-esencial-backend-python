@@ -233,7 +233,7 @@ class ProductoSerializer(serializers.ModelSerializer):
         return data
 ```
 
-Esta validación garantiza que el precio de un producto no pueda ser menor o igual a cero o que un producto aparezca disponible si es que no hay stock.
+Esta validación garantiza que el precio de un producto sea mayor a cero y que un producto no esté disponible si no hay stock.
 
 #protip([
   Las validaciones también pueden definirse a nivel de modelo usando el método `clean()` en Django.

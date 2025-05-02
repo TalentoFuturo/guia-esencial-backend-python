@@ -164,7 +164,7 @@ async def obtener_datos():
     async with aiohttp.ClientSession() as session:
         async with session.get("https://jsonplaceholder.typicode.com/todos/1") as respuesta:
             respuesta.raise_for_status()
-            return respuesta.json()
+            return await respuesta.json()
 
 # Ruta que usa la función asíncrona anterior
 @app.get("/tarea_async")

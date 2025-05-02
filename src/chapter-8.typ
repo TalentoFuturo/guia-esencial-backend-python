@@ -36,12 +36,12 @@ from datetime import datetime, timedelta
 app = FastAPI()
 
 # Configuración básica del token
-SECRET_KEY = "mi_clave_secreta" # ¡Usa una clave segura en producción!
+SECRET_KEY = "mi_clave_secreta" # ¡ADVERTENCIA! Nunca uses esta clave en producción. Genera una clave segura y almacénala como variable de entorno.
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
 
 # OAuth2 usando token por contraseña
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token") // "token" es la URL para obtener el token
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token") # "token" es la URL para obtener el token
 
 # Función para verificar el token
 def verificar_token(token: str = Depends(oauth2_scheme)):
