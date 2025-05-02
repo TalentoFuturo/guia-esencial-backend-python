@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+    tags:
+      - 'v*'
   workflow_dispatch:
     inputs:
       version:
@@ -31,3 +33,13 @@ jobs:
         with:
           name: libro-python-backend
           path: build/libro-python-backend.pdf
+          
+      - name: Crear Release
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v1
+        with:
+          files: build/libro-python-backend.pdf
+          name: Libro Python Backend ${{ github.ref_name }}
+          draft: false
+          prerelease: false
+          generate_release_notes: true
