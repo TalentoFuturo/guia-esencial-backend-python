@@ -180,39 +180,3 @@ def eliminar_usuario(usuario_id: int):
 
 #pagebreak()
 
-== Implementación de HATEOAS
-
-HATEOAS (Hypermedia as the Engine of Application State) mejora la navegabilidad de las APIs REST al proporcionar enlaces a recursos relacionados en las respuestas.
-
-*Ejemplo de implementación de HATEOAS en FastAPI:*
-
-#codly(languages: codly-languages)
-```python
-from fastapi import FastAPI
-from pydantic import BaseModel
-
-app = FastAPI()
-
-# Modelo con enlaces HATEOAS
-class UsuarioHATEOAS(BaseModel):
-  id: int
-  nombre: str
-  _links: dict
-
-@app.get("/usuarios/{usuario_id}", response_model=UsuarioHATEOAS)
-def obtener_usuario_hateoas(usuario_id: int):
-    return {
-        "id": usuario_id,
-        "nombre": f"Usuario {usuario_id}",
-        "_links": {
-            "self": {"href": f"/usuarios/{usuario_id}"},
-            "todos_los_usuarios": {"href": "/usuarios"},
-            "editar": {"href": f"/usuarios/{usuario_id}", "method": "PUT"},
-            "eliminar": {"href": f"/usuarios/{usuario_id}", "method": "DELETE"},
-        }
-    }
-```
-
-#protip([
-    HATEOAS es útil en APIs diseñadas para ser consumidas por clientes dinámicos, como SPAs y aplicaciones móviles.
-])
