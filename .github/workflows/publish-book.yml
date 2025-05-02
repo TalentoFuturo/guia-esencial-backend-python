@@ -2,8 +2,6 @@ name: Publicar Libro
 
 on:
   push:
-    branches:
-      - main
     tags:
       - 'v*'
   workflow_dispatch:
@@ -12,6 +10,9 @@ on:
         description: 'Versión del libro (ej. v1.0.0)'
         required: true
         default: ''
+
+permissions:
+  contents: write
 
 jobs:
   build-and-publish:
