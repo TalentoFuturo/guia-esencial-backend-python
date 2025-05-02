@@ -35,6 +35,8 @@ Los serializers en DRF permiten transformar objetos Django en JSON y viceversa.
 
 Actúan como un puente entre el ORM de Django y la API,  asegurando que los datos se formateen correctamente y cumplan con las validaciones necesarias.
 
+#pagebreak()
+
 *Ejemplo de un serializer básico*:
 
 #codly(languages: codly-languages)
@@ -73,6 +75,8 @@ class ProductoViewSet(viewsets.ModelViewSet):
     queryset = Producto.objects.all()
     serializer_class = ProductoSerializer
 ```
+
+#pagebreak()
 
 *Para registrar estos ViewSets en las rutas de Django, se utilizan Routers*:
 
@@ -199,6 +203,8 @@ Los permisos se pueden personalizar creando clases propias heredadas de `BasePer
 #protip([
   Si deseas una autenticación moderna y stateless, implementa JWT (JSON Web Tokens) usando una librería como djangorestframework-simplejwt.
 ])
+
+#pagebreak()
 
 == Validaciones Personalizadas en DRF
 

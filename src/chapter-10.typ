@@ -29,32 +29,28 @@ El desarrollo backend con Python cambia rápidamente con nuevas versiones, frame
 
 === Blogs y documentación oficial
 
-- Django Blog #link("https://blog.djangoproject.com/weblog")
-- FastAPI Docs: #link("https://fastapi.tiangolo.com/")
-- Real Python: #link("https://realpython.com/")
-- Full Stack Python: #link("https://www.fullstackpython.com/")
-- Django REST Framework (DRF):  Introducción a DRF y su
-configuración. Guías completas para Serializers, ViewSets, Routers y Autenticación con ejemplos detallados. #link("https://www.django-rest-framework.org/")
-- Django Debug Toolbar: Herramienta para monitorear y depurar
-consultas SQL, middleware y otras operaciones de Django. Útil
-para optimización en desarrollo. #link("https://django-debug-toolbar.readthedocs.io/")
+- *Django Blog:* #link("https://blog.djangoproject.com/weblog")
+- *FastAPI Docs:* #link("https://fastapi.tiangolo.com/")
+- *Real Python:* #link("https://realpython.com/")
+- *Full Stack Python:* #link("https://www.fullstackpython.com/")
+- *Django REST Framework (DRF):* Introducción a DRF y su configuración. Guías completas para Serializers, ViewSets, Routers y Autenticación con ejemplos detallados. #link("https://www.django-rest-framework.org/")
+- *Django Debug Toolbar:* Herramienta para monitorear y depurar consultas SQL, middleware y otras operaciones de Django. Útil para optimización en desarrollo. #link("https://django-debug-toolbar.readthedocs.io/")
 
 === Libros
 
-- "Two Scoops of Django 3.x" : by Audrey Roy Greenfeld and Daniel Roy Greenfeld. Cubre buenas prácticas en Django, incluyendo modelos, ORM y CBVs.
+- *Two Scoops of Django 3.x:* by Audrey Roy Greenfeld and Daniel Roy Greenfeld. Cubre buenas prácticas en Django, incluyendo modelos, ORM y CBVs.
 
 === Cursos y plataformas de aprendizaje
 
-- Pluralsight:  Especializado en tecnología backend y arquitecturas avanzadas #link("https://www.pluralsight.com/")
-- JetBrains Academy: Cursos interactivos de Python con ejercicios
-prácticos. #link("https://www.jetbrains.com/academy/")
+- *Pluralsight:* Especializado en tecnología backend y arquitecturas avanzadas #link("https://www.pluralsight.com/")
+- *JetBrains Academy:* Cursos interactivos de Python con ejercicios prácticos. #link("https://www.jetbrains.com/academy/")
 
 == Comunidades y grupos
 
-- Stack Overflow (Python): #link("https://stackoverflow.com/questions/tagged/python")
-- r/python en Reddit: #link("https://www.reddit.com/r/python/")
-- Grupos de LinkedIn: Busca "Python Backend Developers" para compartir experiencias.
-- Discord & Slack: Únete a comunidades activas de desarrollo backend.
+- *Stack Overflow (Python):* #link("https://stackoverflow.com/questions/tagged/python")
+- *r/python* en Reddit: #link("https://www.reddit.com/r/python/")
+- *Grupos de LinkedIn:* Busca "Python Backend Developers" para compartir experiencias.
+- *Discord & Slack:* Únete a comunidades activas de desarrollo backend.
 
 == Conclusión
 

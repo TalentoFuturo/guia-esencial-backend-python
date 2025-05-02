@@ -40,6 +40,8 @@ def saludo(request):
   Utiliza vistas basadas en clases (class-based views) para mejorar la modularidad de tu código.
 ])
 
+#pagebreak()
+
 == Modelos y ORM en Django
 Django cuenta con un ORM (Object-Relational Mapper) que permite interactuar con bases de datos mediante clases en Python.
 
@@ -122,6 +124,8 @@ def mostrar_nombre(request):
 #protip([
   Utiliza `{% extends %}` y `{% include %}` en plantillas para evitar duplicación de código.
 ])
+
+#pagebreak()
 
 == Formularios y validaciones en Django
 

@@ -25,6 +25,8 @@ Los frameworks ayudan a los desarrolladores a estructurar su código y facilitar
 - *Django:* Un framework full-stack que proporciona herramientas para la gestión de bases de datos, autenticación, seguridad y más.
 - *FastAPI:* Un framework moderno y asíncrono optimizado para aplicaciones API con alto rendimiento.
 
+#pagebreak()
+
 == Comparación entre Django y FastAPI
 
 
@@ -61,6 +63,8 @@ Entonces... ¿cuándo usar Django y cuándo usar FastAPI?
 #protip([
   No tienes que elegir entre uno y otro. Puedes combinar Django para la administración y FastAPI para servicios de alto rendimiento.
 ])
+
+#pagebreak()
 
 == Componentes de una arquitectura web
 

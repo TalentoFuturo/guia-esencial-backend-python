@@ -41,6 +41,8 @@ REST_FRAMEWORK = {
 }
 ```
 
+#pagebreak()
+
 *Los tokens pueden generarse y asignarse a los usuarios de la siguiente manera*:
 
 #codly(languages: codly-languages)

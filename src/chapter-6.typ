@@ -83,6 +83,8 @@ Esto iniciará el servidor en #link("http://127.0.0.1:8000/"), donde se podrá a
     Usa `--reload` para reiniciar automáticamente el servidor en cada cambio de código durante el desarrollo.
 ])
 
+#pagebreak()
+
 == Creación de un servicio básico con FastAPI
 
 FastAPI facilita la creación de servicios REST con un enfoque declarativo y basado en anotaciones de tipo.
@@ -129,6 +131,8 @@ Ejecuta el servidor y prueba los endpoints en #link("http://127.0.0.1:8000/docs/
 #protip([
     Pydantic mejora la validación de datos y la documentación de la API de manera automática.
 ])
+
+#pagebreak()
 
 == Arquitectura de FastAPI y diferencias con Django
 
@@ -190,6 +194,8 @@ def saludo():
 ```
 
 Ambas funciones hacen lo mismo, pero FastAPI tiene menos código y genera documentación automática.
+
+#pagebreak()
 
 == ¿Cuándo usar FastAPI en lugar de Django?
 

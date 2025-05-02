@@ -160,11 +160,11 @@ Resultado esperado:
 
 #codly(languages: codly-languages)
 ```text
-============================= test session starts ==============================
+========================= test session starts ========
 ...
 collected 1 item
 
-test_main.py .                                                            [100%]
+test_main.py .                                                    [100%]
 
-============================== 1 passed in ...s ===============================
+========================== 1 passed in ...s ===========================
 ```

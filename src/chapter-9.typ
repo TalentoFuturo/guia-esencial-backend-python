@@ -42,6 +42,8 @@ def procesar(background_tasks: BackgroundTasks):
     return {"mensaje": "Tarea en segundo plano iniciada"}
 ```
 
+#pagebreak()
+
 === Uso de Celery para tareas asíncronas
 
 Para tareas más complejas, usa Celery junto con un message broker (como Redis o RabbitMQ).
@@ -82,6 +84,8 @@ def tarea_larga():
 #protip([
     Usa Celery para tareas programadas, procesamiento intensivo, o cuando necesites más control sobre las colas y los workers.
 ])
+
+#pagebreak()
 
 == Uso de WebSockets y eventos en FastAPI
 
@@ -139,6 +143,8 @@ socket.onerror = function(error) {
 #protip([
     Usa WebSockets en combinación con Redis (Pub/Sub) o Kafka para manejar múltiples clientes y escalar horizontalmente.
 ])
+
+#pagebreak()
 
 == Manejo de operaciones asíncronas (async/await)
 

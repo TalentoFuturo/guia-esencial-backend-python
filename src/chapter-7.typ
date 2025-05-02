@@ -45,6 +45,8 @@ def respuesta_personalizada():
     Usa `status_code` en los decoradores para definir respuestas específicas desde la vista.
 ])
 
+#pagebreak()
+
 == Validaciones con Pydantic
 
 Pydantic es el motor de validación de FastAPI. Permite definir modelos de datos y validar automáticamente la información entrante.
@@ -108,6 +110,8 @@ def buscar_usuario(nombre: str = None): // 'None' lo hace opcional
 #protip([
     Define valores por defecto en los parámetros para evitar errores en las solicitudes.
 ])
+
+#pagebreak()
 
 == Implementación de operaciones CRUD
 
@@ -173,6 +177,8 @@ def eliminar_usuario(usuario_id: int):
 #protip([
     Implementa respuestas personalizadas con `HTTPException` para manejar errores de manera efectiva.
 ])
+
+#pagebreak()
 
 == Implementación de HATEOAS
 

@@ -32,8 +32,8 @@
   listing-index: (enabled: true),
   table-of-contents: outline(
     depth: 1,
-
   ),
+  external-link-circle: false,
 )
 
 // Configuración de fuentes
@@ -46,6 +46,7 @@
 
 // configurción de codigo
 #show raw: set text(font: "fira mono", size: 10pt)
+// #show raw.where(block: true): it => block(breakable: false, it)
 
 // Pintorita
 #show raw.where(lang: "pintora"): it => pintorita.render(it.text)
@@ -65,7 +66,7 @@
 ]
 #show heading.where(level: 3): it => [
   #set text(size: 16pt, font: "quicksand", weight: "bold")
-  #it
+  #it.body
   #v(0.2em)
 ]
 
