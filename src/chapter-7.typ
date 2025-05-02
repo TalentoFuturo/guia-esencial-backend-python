@@ -177,6 +177,3 @@ def eliminar_usuario(usuario_id: int):
 #protip([
     Implementa respuestas personalizadas con `HTTPException` para manejar errores de manera efectiva.
 ])
-
-#pagebreak()
-
