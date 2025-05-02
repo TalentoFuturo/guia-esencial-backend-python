@@ -4,7 +4,7 @@
 #import "@preview/colorful-boxes:1.4.2": *
 #import "@preview/pintorita:0.1.4": *
 
-#import "table-style.typ": styled-comparison-table
+#import "modules/table-style.typ": styled-comparison-table
 #import "components.typ": protip
 
 #set text(lang: "es")

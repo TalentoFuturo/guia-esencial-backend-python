@@ -4,7 +4,7 @@
 #import "@preview/tblr:0.3.1": *
 #import "@preview/colorful-boxes:1.4.2": *
 
-#import "table-style.typ": styled-comparison-table
+#import "modules/table-style.typ": styled-comparison-table
 #import "components.typ": protip, note
 #set text(lang: "es")
 
